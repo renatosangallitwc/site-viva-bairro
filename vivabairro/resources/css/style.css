@@ -1,0 +1,290 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #333;
+}
+
+.topo {
+    background-color: #244d78;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo h2 {
+    font-size: 20px;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+.menu {
+    background-color: #f5f5f5;
+    width: 200px;
+    padding: 20px 10px;
+}
+
+.menu h3 {
+    color: #244d78;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.menu button {
+    display: block;
+    width: 100%;
+    padding: 12px 8px;
+    border: none;
+    background: none;
+    color: #244d78;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #dce8f3;
+    border-radius: 6px;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 25px;
+}
+
+.tela h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.tela > p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.escondida {
+    display: none;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 35px;
+    max-width: 700px;
+    margin-top: 15px;
+}
+
+.cartao {
+    padding: 12px;
+    border-radius: 12px;
+    min-height: 90px;
+}
+
+.cartao h3 {
+    font-size: 17px;
+}
+
+.cartao span {
+    font-size: 23px;
+}
+
+.cartao p {
+    margin-top: 2px;
+}
+
+.azul {
+    background-color: #b9e1ef;
+}
+
+.amarelo {
+    background-color: #f5e2b7;
+}
+
+.verde {
+    background-color: #c5efbd;
+}
+
+.rosa {
+    background-color: #efd2ef;
+}
+
+.solicitacoes {
+    margin-top: 40px;
+    max-width: 700px;
+    padding: 12px;
+}
+
+.solicitacoes h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.pedido {
+    background-color: #d9d9d9;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.pedido:first-of-type {
+    border-radius: 10px 10px 0 0;
+}
+
+.pedido:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.pendente {
+    background-color: #c43c3c;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+.concluido {
+    background-color: #239b45;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 13px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+form input:focus {
+    border: 1px solid #299b45;
+}
+
+.botao-cadastrar,
+.botao-novo {
+    background-color: #299b45;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.botao-voltar {
+    background-color: white;
+    color: #299b45;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.morador {
+    background-color: #e3e3e3;
+    border: 1px solid #999;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0;
+}
+
+.morador h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.morador p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.acoes button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.editar {
+    background-color: #c9e7f1;
+    color: #1684b6;
+}
+
+.excluir {
+    background-color: #f5d5d5;
+    color: #e34b4b;
+}
+
+@media (max-width: 650px) {
+    .topo h2 {
+        font-size: 16px;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu h3 {
+        width: 100%;
+    }
+
+    .menu button {
+        width: auto;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .pedido {
+        gap: 10px;
+        font-size: 13px;
+    }
+}

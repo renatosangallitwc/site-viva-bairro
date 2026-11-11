@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Bairro</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <h2>👥 Associação Comunitária - Viva Bairro</h2>
+        <div>🔔　👤</div>
+    </header>
+
+    <div class="layout">
+
+        <aside class="menu">
+            <h3>Menu Principal</h3>
+
+            <button onclick="mostrarTela('inicio')">☷ Início</button>
+            <button onclick="mostrarTela('moradores')">👥 Moradores</button>
+            <button onclick="mostrarTela('beneficios')">🎁 Benefícios</button>
+            <button onclick="mostrarTela('relatorios')">📊 Relatórios</button>
+        </aside>
+
+        <main class="conteudo">
+
+            <section id="inicio" class="tela">
+                <h2>Painel inicial</h2>
+                <p>Bem-vindo ao sistema de gestão comunitária.</p>
+
+                <div class="cartoes">
+                    <div class="cartao azul">
+                        <h3>👥</h3>
+                        <span id="totalMoradores">0</span>
+                        <p>Moradores</p>
+                    </div>
+
+                    <div class="cartao amarelo">
+                        <h3>📋</h3>
+                        <span>1</span>
+                        <p>Solicitações</p>
+                    </div>
+
+                    <div class="cartao verde">
+                        <h3>▦</h3>
+                        <span>0</span>
+                        <p>Eventos</p>
+                    </div>
+
+                    <div class="cartao rosa">
+                        <h3>🎁</h3>
+                        <span>0</span>
+                        <p>Benefícios</p>
+                    </div>
+                </div>
+
+                <div class="solicitacoes">
+                    <h3>Últimas solicitações</h3>
+
+                    <div class="pedido">
+                        <span>Pedido de auxílio</span>
+                        <span class="pendente">Pendente</span>
+                    </div>
+
+                    <div class="pedido">
+                        <span>Solicitação de atendimento</span>
+                        <span class="concluido">Concluído</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="moradores" class="tela escondida">
+                <h2>Lista de moradores</h2>
+
+                <div id="listaMoradores"></div>
+
+                <button class="botao-novo" onclick="mostrarTela('cadastro')">
+                    + Novo morador
+                </button>
+
+                <button class="botao-voltar" onclick="mostrarTela('inicio')">
+                    Voltar para o início
+                </button>
+            </section>
+
+            <section id="cadastro" class="tela escondida">
+                <h2>Cadastrar novo morador</h2>
+
+                <form id="formMorador">
+                    <label>Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite nome completo..." required>
+
+                    <label>Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Digite telefone..." required>
+
+                    <label>Endereço</label>
+                    <input type="text" id="endereco" placeholder="Digite endereço..." required>
+
+                    <label>E-mail</label>
+                    <input type="email" id="email" placeholder="Digite e-mail..." required>
+
+                    <button type="submit" class="botao-cadastrar">Cadastrar morador</button>
+                </form>
+
+                <button class="botao-voltar" onclick="mostrarTela('moradores')">
+                    Voltar para moradores
+                </button>
+            </section>
+
+            <section id="beneficios" class="tela escondida">
+                <h2>Benefícios</h2>
+                <p>Área de organização e acompanhamento dos benefícios comunitários.</p>
+                <button class="botao-voltar" onclick="mostrarTela('inicio')">Voltar para o início</button>
+            </section>
+
+            <section id="relatorios" class="tela escondida">
+                <h2>Relatórios</h2>
+                <p>Resumo dos moradores cadastrados na associação.</p>
+                <p>Total de moradores: <strong id="totalRelatorios">0</strong></p>
+                <button class="botao-voltar" onclick="mostrarTela('inicio')">Voltar para o início</button>
+            </section>
+
+        </main>
+    </div>
+    
+    
+
+</body>
+</html>
+
